@@ -3,19 +3,19 @@ import { Web3Modal } from '@web3modal/standalone'
 import { useEffect, useState } from 'react'
 
 // 1. Get projectID at https://cloud.walletconnect.com
-if (!process.env.NEXT_PUBLIC_PROJECT_ID) {
-  throw new Error('You need to provide NEXT_PUBLIC_PROJECT_ID env variable')
+if (!process.env.910ae934e4da14873e3374cd4ce3d5bf) {
+  throw new Error('You need to provide 910ae934e4da14873e3374cd4ce3d5bf env variable')
 }
 
 // 2. Configure web3Modal
-const web3Modal = new Web3Modal({ projectId: process.env.NEXT_PUBLIC_PROJECT_ID })
+const web3Modal = new Web3Modal({ projectId: process.env.910ae934e4da14873e3374cd4ce3d5bf })
 
 export default function HomePage() {
   const [signClient, setSignClient] = useState<SignClient | undefined>(undefined)
 
   // 3. Initialize sign client
   async function onInitializeSignClient() {
-    const client = await SignClient.init({ projectId: process.env.NEXT_PUBLIC_PROJECT_ID })
+    const client = await SignClient.init({ projectId: process.env.910ae934e4da14873e3374cd4ce3d5bf })
     setSignClient(client)
   }
 
